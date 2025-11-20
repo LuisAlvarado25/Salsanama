@@ -1,45 +1,49 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Spotify Metrónomo Sincronizado</title>
-  
-  <link rel="stylesheet" href="styles.css"> 
-  
-  <script src="https://sdk.scdn.co/spotify-player.js"></script>
+  <meta charset="UTF-8" />
+  <title>Spotify Player + Chicharra</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>Spotify Metrónomo Sincronizado 🎶</h1>
-  <button id="loginBtn">Iniciar sesión en Spotify</button>
 
-  <div id="main-content">
-    
-    <div id="playlists">
-      <h3>Playlists (Cargando...)</h3>
-      <select id="playlist-selector" class="mobile-only"></select>
-      </div>
+<div class="container">
 
-    <div id="tracks"><h3>Canciones</h3></div>
-  </div>
+  <h1 class="title">Spotify Player</h1>
 
-  <audio id="metronomo" src="chicharra.mp3"></audio> 
+  <button id="loginBtn" class="btn">Iniciar sesión</button>
 
-  <div id="controls">
-    
-    <div id="metro-display">Metrónomo: Inactivo</div>
+  <div class="lists-container">
 
-    <div id="player-controls">
-      <button id="playBtn">▶️</button>
+    <div class="list-block">
+      <h2 class="subtitle">Tus Playlists</h2>
+      <ul id="playlists" class="playlist-list"></ul>
     </div>
 
-    <div id="seekbar-container">
-        <span id="contador">0:00</span>
-        <div id="seekbar"><div id="seekbar-progress"></div></div>
-        <span id="duracion">0:00</span>
+    <div class="list-block">
+      <h2 class="subtitle">Canciones</h2>
+      <ul id="tracks" class="playlist-list"></ul>
     </div>
+
   </div>
 
-  <script src="script.js"></script> 
+  <div id="player-controls">
+    <button id="playBtn">▶️</button>
+  </div>
+
+  <div id="seekbar-container">
+      <span id="contador">0:00</span>
+      <div id="seekbar"><div id="seekbar-progress"></div></div>
+      <span id="duracion">0:00</span>
+  </div>
+
+  <div style="margin-top:20px;">
+      <strong>Contador de 40s:</strong> <span id="contadorsegundos">0:00</span>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+<script src="https://sdk.scdn.co/spotify-player.js"></script>
 </body>
 </html>
