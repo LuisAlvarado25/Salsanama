@@ -2,7 +2,7 @@
 // CONFIGURACIÓN
 // ----------------------------------------------------
 const CLIENT_ID = "9643b3fc5b11421da0364a8eff9b8545";
-const REDIRECT_URI = "http://127.0.0.1:5500/index.html";
+const REDIRECT_URI = "https://luisalvarado25.github.io/Salsanama/index.html";
 const SCOPES = "playlist-read-private playlist-read-collaborative user-modify-playback-state user-read-playback-state streaming";
 
 // DOM
@@ -263,3 +263,4 @@ function start40sCounter(state) {
         }
     }, 1000);
 }
+
